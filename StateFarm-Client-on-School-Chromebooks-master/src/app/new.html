@@ -1,0 +1,21 @@
+<script>
+let a = window.open('about:blank', "_blank");
+a.window.addEventListener('beforeunload', (e) => e.preventDefault());
+let script = a.document.createElement('script');
+script.textContent = `
+window.addEventListener('beforeunload', (e) => e.preventDefault());
+let erudascript = document.createElement('script');
+erudascript.src = 'https://cdn.jsdelivr.net/npm/eruda';
+document.body.appendChild(erudascript);
+setTimeout(() => eruda.init(), 1000);
+let frame = document.createElement('iframe');
+frame.src = 'https://animated-enigma-7vqwq74w6g94cpjv6-6602.app.github.dev/new9';
+frame.style.width = '100vw';
+frame.style.height = '650px';
+document.body.appendChild(frame);
+`;
+a.document.body.appendChild(script);
+let erudascript = document.createElement('script');
+erudascript.src = 'https://cdn.jsdelivr.net/npm/eruda';
+document.body.appendChild(erudascript);
+</script>
